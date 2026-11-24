@@ -22,6 +22,8 @@
   <link rel="preconnect" href="https://picsum.photos">
   <!-- Analytics (Plausible) -->
   <script defer data-domain="carlossaldanha.github.io" src="https://plausible.io/js/script.js"></script>
+  <!-- Memberstack (substitua app_SEU_APP_ID pelo seu App ID) -->
+  <script data-memberstack-app="app_SEU_APP_ID" src="https://static.memberstack.com/scripts/v2/memberstack.js" type="text/javascript"></script>
   <script src="build-crew.js" data-agents="6" data-names="Karol,Ana,Lia,Bia,Mia,Nina" data-colors="#ec4899,#f472b6,#f9a8d4,#fbcfe8,#fda4af,#f43f5e" data-speed="1.05" data-once="session"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -140,6 +142,9 @@
       <a href="#beneficios">Benefícios</a>
       <a href="#modulos">Módulos</a>
       <a href="#depoimentos">Depoimentos</a>
+      <a href="/members.html" data-ms-content="members" style="margin-left:24px;font-size:14px;color:#4b5563;font-weight:500;">Minha área</a>
+      <button data-ms-modal="signup" style="margin-left:24px;background:var(--pink);color:#fff;padding:10px 22px;border-radius:999px;font-weight:600;font-size:14px;border:none;cursor:pointer;">Criar conta</button>
+      <button data-ms-modal="login" style="margin-left:12px;background:transparent;color:var(--pink);padding:10px 22px;border-radius:999px;font-weight:600;font-size:14px;border:1px solid var(--pink);cursor:pointer;">Entrar</button>
       <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=smarttechpelotas%40outlook.com&amount=99.00&currency_code=BRL&item_name=Curso+Nail+Art+Profissional+-+Karol+Souza&no_shipping=1" class="btn-nav" target="_blank" rel="noopener">Comprar</a>
     </nav>
   </header>
