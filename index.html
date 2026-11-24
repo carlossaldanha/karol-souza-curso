@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Nail Art Profissional — Karol Souza</title>
+  <script src="build-crew.js" data-agents="6" data-names="Karol,Ana,Lia,Bia,Mia,Nina" data-colors="#ec4899,#f472b6,#f9a8d4,#fbcfe8,#fda4af,#f43f5e" data-speed="1.05" data-once="session"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --pink: #ec4899;
+      --pink-dark: #f472b6;
+      --pink-soft: #2a1a2e;
+      --gold: #d4a574;
+      --dark: #0f0a14;
+      --dark2: #1a1322;
+      --dark3: #251b2f;
+      --gray: #9ca3af;
+      --gray-light: #d1d5db;
+      --green: #34d399;
+      --border: #2d2238;
+    }
+    body { font-family: "Segoe UI", system-ui, -apple-system, sans-serif; background: var(--dark); color: var(--gray-light); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+
+    .topbar { background: linear-gradient(90deg, #be185d, #9333ea); color: #fff; text-align: center; padding: 10px 20px; font-size: 14px; font-weight: 600; }
+    .topbar strong { color: #fde68a; }
+
+    header { padding: 18px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); background: rgba(15,10,20,0.85); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 50; }
+    .logo { font-weight: 800; font-size: 22px; letter-spacing: -0.5px; color: var(--pink); }
+    .logo span { color: var(--gold); }
+    nav a { margin-left: 24px; font-size: 14px; color: var(--gray); font-weight: 500; transition: color .2s; }
+    nav a:hover { color: var(--pink); }
+    .btn-nav { background: var(--pink); color: #fff; padding: 10px 22px; border-radius: 999px; font-weight: 600; font-size: 14px; }
+
+    .hero { padding: 70px 40px 60px; text-align: center; background: linear-gradient(180deg, var(--dark2) 0%, var(--dark) 100%); position: relative; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; top: -100px; left: -100px; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(236,72,153,0.25), transparent 70%); }
+    .badge { display: inline-block; background: var(--dark3); color: var(--pink); padding: 8px 18px; border-radius: 999px; font-size: 13px; font-weight: 700; margin-bottom: 20px; border: 1px solid var(--border); }
+    .hero h1 { font-size: 46px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 16px; max-width: 820px; margin-left: auto; margin-right: auto; color: #fff; }
+    .hero h1 em { font-style: normal; color: var(--pink); }
+    .hero p { font-size: 18px; color: var(--gray); max-width: 680px; margin: 0 auto 28px; }
+    .btn { display: inline-block; padding: 16px 38px; background: var(--pink); color: #fff; border-radius: 999px; font-weight: 700; font-size: 16px; box-shadow: 0 12px 32px rgba(236,72,153,0.4); transition: transform .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-green { background: var(--green); box-shadow: 0 12px 32px rgba(52,211,153,0.4); color: #0f0a14; }
+    .hero-meta { margin-top: 24px; font-size: 13px; color: var(--gray); }
+    .hero-meta span { margin: 0 12px; }
+
+    .video-box { max-width: 860px; margin: 0 auto 20px; background: var(--dark3); border-radius: 16px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 16px; position: relative; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.4); border: 1px solid var(--border); }
+    .video-box::before { content: "▶"; position: absolute; width: 72px; height: 72px; border-radius: 50%; background: var(--pink); display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 8px 24px rgba(236,72,153,0.5); }
+
+    .section { padding: 80px 40px; max-width: 1180px; margin: 0 auto; }
+    .section-head { text-align: center; margin-bottom: 52px; }
+    .section-head h2 { font-size: 36px; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; color: #fff; }
+    .section-head p { color: var(--gray); font-size: 16px; max-width: 640px; margin: 0 auto; }
+    .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .ben { background: var(--dark2); border: 1px solid var(--border); border-radius: 16px; padding: 28px 24px; transition: transform .2s, box-shadow .2s; }
+    .ben:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(236,72,153,0.15); }
+    .ben .icon { width: 46px; height: 46px; border-radius: 12px; background: var(--pink-soft); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
+    .ben h3 { font-size: 17px; margin-bottom: 6px; color: #fff; }
+    .ben p { color: var(--gray); font-size: 14px; }
+
+    .modules { background: var(--dark2); }
+    .mod-list { max-width: 820px; margin: 0 auto; }
+    .mod { background: var(--dark3); border: 1px solid var(--border); border-radius: 14px; padding: 22px 26px; margin-bottom: 14px; display: flex; gap: 18px; align-items: flex-start; }
+    .mod .num { flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; background: var(--pink); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    .mod h3 { font-size: 17px; margin-bottom: 4px; color: #fff; }
+    .mod p { color: var(--gray); font-size: 14px; }
+
+    .testi { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+    .tcard { background: var(--dark2); border: 1px solid var(--border); border-radius: 16px; padding: 28px; position: relative; }
+    .tcard .stars { color: var(--gold); margin-bottom: 10px; letter-spacing: 2px; }
+    .tcard p { color: var(--gray-light); font-size: 15px; font-style: italic; margin-bottom: 16px; line-height: 1.7; }
+    .tcard .author { display: flex; align-items: center; gap: 12px; }
+    .tcard .avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--pink-soft); display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .tcard .aname { font-weight: 700; font-size: 14px; color: #fff; }
+    .tcard .acity { font-size: 12px; color: var(--gray); }
+    .tcard .result { display: inline-block; margin-top: 8px; background: rgba(52,211,153,0.15); color: var(--green); padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+
+    .pricing { background: var(--dark2); }
+    .price-card { max-width: 460px; margin: 0 auto; background: var(--dark3); border: 2px solid var(--pink); border-radius: 20px; padding: 40px 32px; text-align: center; box-shadow: 0 20px 50px rgba(236,72,153,0.2); position: relative; }
+    .price-card .tag { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--pink); color: #fff; padding: 6px 18px; border-radius: 999px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .price-card h3 { font-size: 22px; margin-bottom: 6px; color: #fff; }
+    .price-card .old { color: var(--gray); text-decoration: line-through; font-size: 16px; }
+    .price-card .price { font-size: 52px; font-weight: 800; color: var(--pink); letter-spacing: -2px; margin: 8px 0; }
+    .price-card .price small { font-size: 18px; font-weight: 500; }
+    .price-card ul { text-align: left; list-style: none; margin: 24px 0; }
+    .price-card ul li { padding: 8px 0; font-size: 14px; color: var(--gray-light); }
+    .price-card ul li::before { content: "✓ "; color: var(--green); font-weight: 700; }
+    .guarantee { margin-top: 18px; font-size: 13px; color: var(--gray); }
+
+    .faq { max-width: 760px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+    .faq-item h3 { font-size: 16px; margin-bottom: 6px; color: #fff; }
+    .faq-item p { color: var(--gray); font-size: 14px; }
+
+    footer { background: var(--dark2); color: var(--gray); text-align: center; padding: 32px 40px; font-size: 13px; border-top: 1px solid var(--border); }
+    footer strong { color: #fff; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+      header { padding: 14px 20px; }
+      nav a { margin-left: 12px; font-size: 13px; }
+      .section { padding: 60px 20px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="topbar" data-build>
+    🔥 Últimas vagas com <strong>50% de desconto</strong> — oferta por tempo limitado!
+  </div>
+
+  <header data-build>
+    <div class="logo" data-build>Karol<span>Souza</span></div>
+    <nav data-build>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#modulos">Módulos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#preco" class="btn-nav">Garantir vaga</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge" data-build>✨ Curso Online · Nail Art Profissional</div>
+    <h1 data-build>Aprenda <em>nail art do zero</em> e transforme sua paixão em profissão</h1>
+    <p data-build>Mesmo que você nunca tenha pintado uma unha na vida. Método passo a passo da Karol Souza para você dominar técnicas, atrair clientes e faturar alto.</p>
+    <div style="max-width:860px;margin:0 auto 20px;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.4);border:1px solid var(--border);" data-build>
+      <iframe width="100%" height="484" src="https://www.youtube.com/embed/rrQba1ysFSk" title="10 Easy Nail Art Designs for Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block;"></iframe>
+    </div>
+    <div data-build>
+      <a href="#preco" class="btn">Quero começar agora</a>
+    </div>
+    <div class="hero-meta" data-build>
+      <span>🎓 +2.400 alunas</span>
+      <span>⭐ 4.9/5 de avaliação</span>
+      <span>📅 Acesso vitalício</span>
+    </div>
+  </section>
+
+  <section class="section" id="beneficios">
+    <div class="section-head" data-build>
+      <h2>O que você vai aprender</h2>
+      <p>Um método completo, do básico ao avançado, com técnicas que realmente funcionam no mercado</p>
+    </div>
+    <div class="benefits">
+      <div class="ben" data-build>
+        <div class="icon">💅</div>
+        <h3>Preparação perfeita</h3>
+        <p>Cuticulagem, lixamento e preparação da unha para esmaltação duradoura.</p>
+      </div>
+      <div class="ben" data-build>
+        <div class="icon">🎨</div>
+        <h3>Técnicas de nail art</h3>
+        <p>Francesinha, ombré, marble, floral, geométrico e muito mais.</p>
+      </div>
+      <div class="ben" data-build>
+        <div class="icon">💎</div>
+        <h3>Alongamento</h3>
+        <p>Fibra de vidro, gel e acrílico com acabamento profissional.</p>
+      </div>
+      <div class="ben" data-build>
+        <div class="icon">📸</div>
+        <h3>Fotografia para Instagram</h3>
+        <p>Como fotografar e postar para atrair clientes e vender mais.</p>
+      </div>
+      <div class="ben" data-build>
+        <div class="icon">💰</div>
+        <h3>Precificação</h3>
+        <p>Como cobrar o justo e montar sua tabela de preços.</p>
+      </div>
+      <div class="ben" data-build>
+        <div class="icon">📱</div>
+        <h3>Marketing digital</h3>
+        <p>Estratégias para lotar sua agenda nas redes sociais.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section modules" id="modulos">
+    <div class="section-head" data-build>
+      <h2>Conteúdo do curso</h2>
+      <p>8 módulos com mais de 60 aulas práticas</p>
+    </div>
+    <div class="mod-list">
+      <div class="mod" data-build>
+        <div class="num">01</div>
+        <div><h3>Fundamentos da manicure</h3><p>Anatomia da unha, higiene, biossegurança e preparação.</p></div>
+      </div>
+      <div class="mod" data-build>
+        <div class="num">02</div>
+        <div><h3>Esmaltação perfeita</h3><p>Técnica de esmaltação, francesinha clássica e durabilidade.</p></div>
+      </div>
+      <div class="mod" data-build>
+        <div class="num">03</div>
+        <div><h3>Nail art iniciante</h3><p>Bolinhas, listras, degradê e desenhos simples.</p></div>
+      </div>
+      <div class="mod" data-build>
+        <div class="num">04</div>
+        <div><h3>Nail art avançada</h3><p>Floral, geométrico, marble, ombré e efeitos especiais.</p></div>
+      </div>
+      <div class="mod" data-build>
+        <div class="num">05</div>
+        <div><h3>Alongamento em gel e fibra</h3><p>Técnicas de alongamento com acabamento natural.</p></div>
+      </div>
+      <div class="mod" data-build>
+        <div class="num">06</div>
+        <div><h3>Remoção e manutenção</h3><p>Como remover sem danificar e manter a unha saudável.</p></div>
+      </div>
+      <div class="mod" data-build>
+        <div class="num">07</div>
+        <div><h3>Fotografia e redes sociais</h3><p>Como fotografar, editar e postar para atrair clientes.</p></div>
+      </div>
+      <div class="mod" data-build>
+        <div class="num">08</div>
+        <div><h3>Negócio e precificação</h3><p>Monte sua tabela, organize sua agenda e fidelize clientes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="depoimentos">
+    <div class="section-head" data-build>
+      <h2>Alunas que transformaram suas vidas</h2>
+      <p>Histórias reais de quem aplicou o método e hoje fatura com nail art</p>
+    </div>
+    <div class="testi">
+      <div class="tcard" data-build>
+        <div class="stars">★★★★★</div>
+        <p>"Eu não sabia nem segurar o pincel direito. Em 3 meses já estava atendendo clientes e hoje faturou mais de R$ 4.000 por mês. O método da Karol é incrível!"</p>
+        <div class="author">
+          <div class="avatar">👩</div>
+          <div>
+            <div class="aname">Fernanda Oliveira</div>
+            <div class="acity">Belo Horizonte — MG</div>
+            <span class="result">Fatura R$ 4.200/mês</span>
+          </div>
+        </div>
+      </div>
+      <div class="tcard" data-build>
+        <div class="stars">★★★★★</div>
+        <p>"Fiz o curso durante a licença maternidade. Hoje atendo em casa e consigo cuidar do meu bebê e ainda ter minha renda. Mudou minha vida!"</p>
+        <div class="author">
+          <div class="avatar">👩</div>
+          <div>
+            <div class="aname">Camila Santos</div>
+            <div class="acity">Curitiba — PR</div>
+            <span class="result">Trabalha em casa</span>
+          </div>
+        </div>
+      </div>
+      <div class="tcard" data-build>
+        <div class="stars">★★★★★</div>
+        <p>"A Karol explica tudo com muita paciência. As aulas de nail art avançada são sensacionais. Minhas clientes amam os desenhos que faço agora."</p>
+        <div class="author">
+          <div class="avatar">👩</div>
+          <div>
+            <div class="aname">Beatriz Lima</div>
+            <div class="acity">Salvador — BA</div>
+            <span class="result">+35 clientes fixas</span>
+          </div>
+        </div>
+      </div>
+      <div class="tcard" data-build>
+        <div class="stars">★★★★★</div>
+        <p>"Eu já era manicure mas não sabia nail art. Depois do curso meu ticket médio subiu de R$ 40 para R$ 120. Valeu cada centavo!"</p>
+        <div class="author">
+          <div class="avatar">👩</div>
+          <div>
+            <div class="aname">Larissa Mendes</div>
+            <div class="acity">Recife — PE</div>
+            <span class="result">Ticket médio 3x maior</span>
+          </div>
+        </div>
+      </div>
+      <div class="tcard" data-build>
+        <div class="stars">★★★★★</div>
+        <p>"O módulo de marketing digital me ensinou a postar no Instagram e agora minha agenda está cheia. A Karol é uma excelente professora!"</p>
+        <div class="author">
+          <div class="avatar">👩</div>
+          <div>
+            <div class="aname">Amanda Costa</div>
+            <div class="acity">Fortaleza — CE</div>
+            <span class="result">Agenda lotada</span>
+          </div>
+        </div>
+      </div>
+      <div class="tcard" data-build>
+        <div class="stars">★★★★★</div>
+        <p>"Fiz o curso com minha irmã. Hoje temos um studio juntas e atendemos mais de 60 clientes por mês. O melhor investimento que fizemos!"</p>
+        <div class="author">
+          <div class="avatar">👩</div>
+          <div>
+            <div class="aname">Renata & Priscila</div>
+            <div class="acity">Porto Alegre — RS</div>
+            <span class="result">Studio próprio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pricing" id="preco">
+    <div class="section-head" data-build>
+      <h2>Garanta sua vaga agora</h2>
+      <p>Investimento único, acesso vitalício a todo o conteúdo</p>
+    </div>
+    <div class="price-card" data-build>
+      <div class="tag">Oferta especial</div>
+      <h3>Curso Nail Art Profissional</h3>
+      <div class="old">De R$ 497,00</div>
+      <div class="price">R$ 247<small>,00</small></div>
+      <div style="color:var(--gray);font-size:13px;margin-bottom:16px;">ou 12x de R$ 24,70 no cartão</div>
+      <ul>
+        <li>8 módulos com +60 aulas em vídeo</li>
+        <li>Acesso vitalício ao conteúdo</li>
+        <li>Certificado de conclusão</li>
+        <li>Grupo exclusivo no WhatsApp</li>
+        <li>Suporte direto com a Karol</li>
+        <li>Bônus: guia de precificação</li>
+        <li>Bônus: templates para Instagram</li>
+      </ul>
+      <a href="#" class="btn btn-green" style="width:100%;text-align:center;">Quero garantir minha vaga</a>
+      <div class="guarantee">🛡️ Garantia de 7 dias — se não gostar, devolvemos 100% do seu dinheiro</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head" data-build>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item" data-build>
+        <h3>Preciso ter experiência prévia?</h3>
+        <p>Não! O curso começa do zero e vai até o avançado. Mesmo que você nunca tenha pintado uma unha, vai conseguir acompanhar.</p>
+      </div>
+      <div class="faq-item" data-build>
+        <h3>Por quanto tempo tenho acesso?</h3>
+        <p>Acesso vitalício! Uma vez comprado, o conteúdo é seu para sempre, incluindo atualizações futuras.</p>
+      </div>
+      <div class="faq-item" data-build>
+        <h3>Recebo certificado?</h3>
+        <p>Sim! Ao concluir todas as aulas, você recebe um certificado de conclusão reconhecido.</p>
+      </div>
+      <div class="faq-item" data-build>
+        <h3>Como funciona o pagamento?</h3>
+        <p>Aceitamos cartão de crédito (até 12x), PIX e boleto. A liberação é imediata após a confirmação.</p>
+      </div>
+      <div class="faq-item" data-build>
+        <h3>E se eu não gostar?</h3>
+        <p>Você tem 7 dias de garantia incondicional. Se não gostar, devolvemos 100% do valor pago.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer data-build>
+    <strong>Karol Souza</strong> — Curso Nail Art Profissional · © 2026 · Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
